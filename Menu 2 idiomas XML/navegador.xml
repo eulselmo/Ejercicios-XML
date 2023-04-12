@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+    <navegador category="español">
+        <linkto>Inicio</linkto>
+        <linkto>Categoria</linkto>
+        <linkto>Contacto</linkto>
+    </navegador>
+
+    <navegador category="english">
+        <linkEn>Home</linkEn>
+        <linkEn>Category</linkEn>
+        <linkEn>Contact</linkEn>
+    </navegador>
+</language>

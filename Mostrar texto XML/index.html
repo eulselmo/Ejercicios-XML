@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miembros familia</title>
+</head>
+<body>
+    <h1>Miembros de la familia</h1>
+    <section>
+        <h2>Padre -----------</h2>
+        <h3>Nombre: <span id="nombre"></span></h3>
+        <h3>Apellidos: <span id="apellidos"></span></h3>
+        <p>Descripción: <span id="descripcion"></span></p>
+    </section>
+    <section>
+        <h2>Madre -----------</h2>
+        <h3>Nombre: <span id="nombre2"></span></h3>
+        <h3>Apellidos: <span id="apellidos2"></span></h3>
+        <p>Descripción: <span id="descripcion2"></span></p>
+    </section>
+    </section>
+</body>
+<script>
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+
+    xhttp.open("GET", "prueba.xml", true);
+    xhttp.send();
+    
+    function myFunction(xml) {
+        var xmlDoc = xml.responseXML;
+
+        document.getElementById("nombre").innerHTML =
+        xmlDoc.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+        document.getElementById("apellidos").innerHTML =
+        xmlDoc.getElementsByTagName("apellidos")[0].childNodes[0].nodeValue;
+        document.getElementById("descripcion").innerHTML =
+        xmlDoc.getElementsByTagName("descripcion")[0].childNodes[0].nodeValue;
+
+        document.getElementById("nombre2").innerHTML =
+        xmlDoc.getElementsByTagName("nombre")[1].childNodes[0].nodeValue;
+        document.getElementById("apellidos2").innerHTML =
+        xmlDoc.getElementsByTagName("apellidos")[1].childNodes[0].nodeValue;
+        document.getElementById("descripcion2").innerHTML =
+        xmlDoc.getElementsByTagName("descripcion")[1].childNodes[0].nodeValue;
+    }
+
+    function myFunction2(xml) {
+        var xmlDoc = xml.responseXML;
+        
+    }
+</script>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<familia>
+    <padre>
+        <nombre>Angel</nombre>
+        <apellidos>Garcia Illescas</apellidos>
+        <descripcion>Me gusta la pizza</descripcion>
+    </padre>
+    <madre>
+        <nombre>Estefania</nombre>
+        <apellidos>Carrasco Gomez</apellidos>
+        <descripcion>Me gusta la ensalada</descripcion>
+    </madre>
+</familia>
