@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokio fighters</title>
+</head>
+<body>
+    <h1>Coches japoneses memorables</h1>
+    <section>
+        <h3>Marca: <span id="marca"></span></h3>
+        <h3>Modelo: <span id="modelo"></span></h3>
+        <h3>Potencia: <span id="potencia"></span></h3>
+    </section>
+    <br>
+    <section>
+        <h3>Marca: <span id="marca2"></span></h3>
+        <h3>Modelo: <span id="modelo2"></span></h3>
+        <h3>Potencia: <span id="potencia2"></span></h3>
+    </section>
+    <br>
+    <section>
+        <h3>Marca: <span id="marca3"></span></h3>
+        <h3>Modelo: <span id="modelo3"></span></h3>
+        <h3>Potencia: <span id="potencia3"></span></h3>
+    </section>
+</body>
+<script>
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+
+    xhttp.open("GET", "coche.xml", true);
+    xhttp.send();
+    
+    function myFunction(xml) {
+        var xmlDoc = xml.responseXML;
+
+        document.getElementById("marca").innerHTML =
+        xmlDoc.getElementsByTagName("marca")[0].childNodes[0].nodeValue;
+        document.getElementById("modelo").innerHTML =
+        xmlDoc.getElementsByTagName("modelo")[0].childNodes[0].nodeValue;
+        document.getElementById("potencia").innerHTML =
+        xmlDoc.getElementsByTagName("potencia")[0].childNodes[0].nodeValue;
+
+        document.getElementById("marca2").innerHTML =
+        xmlDoc.getElementsByTagName("marca")[1].childNodes[0].nodeValue;
+        document.getElementById("modelo2").innerHTML =
+        xmlDoc.getElementsByTagName("modelo")[1].childNodes[0].nodeValue;
+        document.getElementById("potencia2").innerHTML =
+        xmlDoc.getElementsByTagName("potencia")[1].childNodes[0].nodeValue;
+
+        document.getElementById("marca3").innerHTML =
+        xmlDoc.getElementsByTagName("marca")[2].childNodes[0].nodeValue;
+        document.getElementById("modelo3").innerHTML =
+        xmlDoc.getElementsByTagName("modelo")[2].childNodes[0].nodeValue;
+        document.getElementById("potencia3").innerHTML =
+        xmlDoc.getElementsByTagName("potencia")[2].childNodes[0].nodeValue;
+    }
+
+    function myFunction2(xml) {
+        var xmlDoc = xml.responseXML;
+        
+    }
+</script>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos>
+    <coche>
+        <marca>Honda</marca>
+        <modelo>NSX</modelo>
+        <potencia>280cv</potencia>
+    </coche>
+    <coche>
+        <marca>Toyota</marca>
+        <modelo>Supra</modelo>
+        <potencia>320cv</potencia>
+    </coche>
+    <coche>
+        <marca>Nissan</marca>
+        <modelo>Skyline GT-R</modelo>
+        <potencia>300cv</potencia>
+    </coche>
+</vehiculos>
